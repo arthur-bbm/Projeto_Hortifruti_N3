@@ -1,0 +1,27 @@
+import { StyleSheet, Text, View } from 'react-native';
+
+import CardFuncionario from './src/componentes/CardFuncionario';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <CardFuncionario nome='Juca Pereira' cargo= 'Analista de TI'
+       email='juca.pereira@gmail.com' foto='foto01'/>
+      
+      <CardFuncionario nome='Ana Mara' cargo= 'Gerente'
+       email='ana.mara@gmail.com' foto='foto02'/>
+      
+      <CardFuncionario nome='Lucio Silva' cargo= 'Programador'
+       email='lucio.silva@gmail.com' foto='foto03'/>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

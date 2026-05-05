@@ -1,9 +1,16 @@
-import { StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 
-export default function CardProduto({nome, preco, categoria, imagem}) {
+export default function CardProduto({nome, preco, categoria, foto}) {
   return (
     <View style={styles.container}>
-      
+      <View>
+        <Image source={foto} style={styles.foto}/>
+      </View>
+      <View>
+        <Text style={styles.texto}>{nome}</Text>
+        <Text style={styles.texto}>{preco}</Text>
+        <Text style={styles.texto}>{categoria}</Text>
+      </View>
     </View>
   );
 }
@@ -11,9 +18,21 @@ export default function CardProduto({nome, preco, categoria, imagem}) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#424242',
-    alignContent: 'center'
+    padding: 10,
+    borderRadius: 20,
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   foto: {
-    borderRadius: 5,
-  }
+    width: 100,
+    height: 100,
+  },
+  texto: {
+    color: '#f0f0f0',
+    fontWeight: 'bold',
+    width: 100,
+    padding: 6,
+    margin: 'auto',
+    textAlign: 'center'
+  },
 });

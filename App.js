@@ -4,8 +4,7 @@ import CardProduto from './components/CardProduto.js';
 export default function App() {
   return (
     <View style={styles.container}>
-      <CardProduto nome='Limão' preco='10' categoria/>
-      <StatusBar style="auto" />
+      <CardProduto nome='Limão' preco={10} categoria='Legume' foto={require('./assets/splash-icon.png')}/>
     </View>
   );
 }

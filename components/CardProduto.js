@@ -7,9 +7,9 @@ export default function CardProduto({nome, preco, categoria, foto}) {
         <Image source={foto} style={styles.foto}/>
       </View>
       <View>
-        <Text style={styles.texto}>{nome}</Text>
-        <Text style={styles.texto}>{preco}</Text>
-        <Text style={styles.texto}>{categoria}</Text>
+        <Text style={styles.texto}>PRODUTO: {nome}</Text>
+        <Text style={styles.texto}>R${preco}</Text>
+        <Text style={styles.texto}>|{categoria}|</Text>
       </View>
     </View>
   );

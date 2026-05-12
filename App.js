@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Image, Button} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, Button, ScrollView} from 'react-native';
 import { useState } from 'react';
 import CardProduto from './components/CardProduto.js';
 
@@ -48,9 +48,11 @@ export default function App() {
           </View>
         </View>
       </View>
-      <View style={styles.items}>
-        {listaFiltrada.map(item => <CardProduto nome={item.nome} preco={item.preco} categoria={item.categoria} foto={item.foto}/>)}
-      </View>
+      <ScrollView>
+        <View style={styles.items}>
+          {listaFiltrada.map(item => <CardProduto nome={item.nome} preco={item.preco} categoria={item.categoria} foto={item.foto}/>)}
+        </View>
+      </ScrollView>
     </View>
   );
 }
